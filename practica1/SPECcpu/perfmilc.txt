@@ -1,0 +1,69 @@
+runspec v4662 - Copyright 1999-2006 Standard Performance Evaluation Corporation
+Using 'linux-suse101-AMD64' tools
+Reading MANIFEST... 17856 files
+Loading runspec modules...............
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/usuario/SPECcpu/config/my-config.cfg'
+Benchmarks selected: 433.milc
+Compiling Binaries
+  Up to date 433.milc train base amd64-m64-gcc42-nn default
+
+
+Parsing Flags
+  Looking at 433.milc base amd64-m64-gcc42-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 433.milc train base amd64-m64-gcc42-nn default: existing (run_base_train_amd64-m64-gcc42-nn.0000)
+Running Benchmarks
+  Running (#1) 433.milc train base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu/bin/specinvoke -d /home/usuario/SPECcpu/benchspec/CPU2006/433.milc/run/run_base_train_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu/bin/specinvoke -E -d /home/usuario/SPECcpu/benchspec/CPU2006/433.milc/run/run_base_train_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+  Running (#2) 433.milc train base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu/bin/specinvoke -d /home/usuario/SPECcpu/benchspec/CPU2006/433.milc/run/run_base_train_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu/bin/specinvoke -E -d /home/usuario/SPECcpu/benchspec/CPU2006/433.milc/run/run_base_train_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+  Running (#3) 433.milc train base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu/bin/specinvoke -d /home/usuario/SPECcpu/benchspec/CPU2006/433.milc/run/run_base_train_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu/bin/specinvoke -E -d /home/usuario/SPECcpu/benchspec/CPU2006/433.milc/run/run_base_train_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Success: 3x433.milc
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc42-nn
+    size: train
+      set: int
+      set: fp
+        format: raw -> /home/usuario/SPECcpu/result/CFP2006.040.train.rsf
+        format: flags -> /home/usuario/SPECcpu/result/CFP2006.040.train.flags.html
+        format: ASCII -> /home/usuario/SPECcpu/result/CFP2006.040.train.txt
+        format: PDF -> /home/usuario/SPECcpu/result/CFP2006.040.train.pdf
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc           --       11.9         -- S                                  
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd                                    NR                                 
+447.dealII                                  NR                                 
+450.soplex                                  NR                                 
+453.povray                                  NR                                 
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm                                     NR                                 
+481.wrf                                     NR                                 
+482.sphinx3                                 NR                                 
+ Est. SPECfp_base2006                    --
+ Est. SPECfp2006                                                    Not Run
+
+
+The log for this run is in /home/usuario/SPECcpu/result/CPU2006.040.log
+
+runspec finished at Mon Oct 31 20:39:52 2016; 71 total seconds elapsed
