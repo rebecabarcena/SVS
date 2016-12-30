@@ -1,0 +1,150 @@
+runspec v4662 - Copyright 1999-2006 Standard Performance Evaluation Corporation
+Using 'linux-suse101-AMD64' tools
+Reading MANIFEST... 17856 files
+Loading runspec modules...............
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/usuario/SPECcpu2006/config/my-config.cfg'
+Benchmarks selected: 456.hmmer
+Compiling Binaries
+  Building 456.hmmer train base amd64-m64-gcc42-nn default: (build_base_amd64-m64-gcc42-nn.0000)
+specmake clean 2> make.clean.err | tee make.clean.out
+rm -rf hmmer hmmer.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+specmake build 2> make.err | tee make.out
+/usr/bin/gcc -c -o alphabet.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         alphabet.c
+/usr/bin/gcc -c -o core_algorithms.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         core_algorithms.c
+/usr/bin/gcc -c -o debug.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         debug.c
+/usr/bin/gcc -c -o display.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         display.c
+/usr/bin/gcc -c -o emit.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         emit.c
+/usr/bin/gcc -c -o emulation.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         emulation.c
+/usr/bin/gcc -c -o fast_algorithms.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         fast_algorithms.c
+/usr/bin/gcc -c -o histogram.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         histogram.c
+/usr/bin/gcc -c -o hmmio.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         hmmio.c
+/usr/bin/gcc -c -o hmmcalibrate.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         hmmcalibrate.c
+/usr/bin/gcc -c -o hmmsearch.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         hmmsearch.c
+/usr/bin/gcc -c -o mathsupport.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         mathsupport.c
+/usr/bin/gcc -c -o masks.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         masks.c
+/usr/bin/gcc -c -o misc.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         misc.c
+/usr/bin/gcc -c -o modelmakers.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         modelmakers.c
+/usr/bin/gcc -c -o plan7.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         plan7.c
+/usr/bin/gcc -c -o plan9.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         plan9.c
+/usr/bin/gcc -c -o postprob.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         postprob.c
+/usr/bin/gcc -c -o prior.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         prior.c
+/usr/bin/gcc -c -o tophits.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         tophits.c
+/usr/bin/gcc -c -o trace.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         trace.c
+/usr/bin/gcc -c -o ucbqsort.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         ucbqsort.c
+/usr/bin/gcc -c -o a2m.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         a2m.c
+/usr/bin/gcc -c -o aligneval.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         aligneval.c
+/usr/bin/gcc -c -o alignio.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         alignio.c
+/usr/bin/gcc -c -o clustal.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         clustal.c
+/usr/bin/gcc -c -o cluster.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         cluster.c
+/usr/bin/gcc -c -o dayhoff.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         dayhoff.c
+/usr/bin/gcc -c -o eps.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         eps.c
+/usr/bin/gcc -c -o file.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         file.c
+/usr/bin/gcc -c -o getopt.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         getopt.c
+/usr/bin/gcc -c -o gki.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         gki.c
+/usr/bin/gcc -c -o gsi.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         gsi.c
+/usr/bin/gcc -c -o hsregex.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         hsregex.c
+/usr/bin/gcc -c -o iupac.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         iupac.c
+/usr/bin/gcc -c -o msa.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         msa.c
+/usr/bin/gcc -c -o msf.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         msf.c
+/usr/bin/gcc -c -o phylip.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         phylip.c
+/usr/bin/gcc -c -o revcomp.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         revcomp.c
+/usr/bin/gcc -c -o rk.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         rk.c
+/usr/bin/gcc -c -o selex.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         selex.c
+/usr/bin/gcc -c -o seqencode.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         seqencode.c
+/usr/bin/gcc -c -o shuffle.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         shuffle.c
+/usr/bin/gcc -c -o sqerror.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         sqerror.c
+/usr/bin/gcc -c -o sqio.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         sqio.c
+/usr/bin/gcc -c -o squidcore.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         squidcore.c
+/usr/bin/gcc -c -o sre_ctype.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         sre_ctype.c
+/usr/bin/gcc -c -o sre_math.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         sre_math.c
+/usr/bin/gcc -c -o sre_random.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         sre_random.c
+/usr/bin/gcc -c -o sre_string.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         sre_string.c
+/usr/bin/gcc -c -o ssi.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         ssi.c
+/usr/bin/gcc -c -o stack.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         stack.c
+/usr/bin/gcc -c -o stockholm.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         stockholm.c
+/usr/bin/gcc -c -o translate.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         translate.c
+/usr/bin/gcc -c -o types.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         types.c
+/usr/bin/gcc -c -o vectorops.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         vectorops.c
+/usr/bin/gcc -c -o weight.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         weight.c
+/usr/bin/gcc   -O2  -DSPEC_CPU_LP64        alphabet.o core_algorithms.o debug.o display.o emit.o emulation.o fast_algorithms.o histogram.o hmmio.o hmmcalibrate.o hmmsearch.o mathsupport.o masks.o misc.o modelmakers.o plan7.o plan9.o postprob.o prior.o tophits.o trace.o ucbqsort.o a2m.o aligneval.o alignio.o clustal.o cluster.o dayhoff.o eps.o file.o getopt.o gki.o gsi.o hsregex.o iupac.o msa.o msf.o phylip.o revcomp.o rk.o selex.o seqencode.o shuffle.o sqerror.o sqio.o squidcore.o sre_ctype.o sre_math.o sre_random.o sre_string.o ssi.o stack.o stockholm.o translate.o types.o vectorops.o weight.o             -lm        -o hmmer
+specmake options 2> options.err | tee options.out
+COMP: /usr/bin/gcc -c -o options.o -DSPEC_CPU -DNDEBUG    -O2       -DSPEC_CPU_LP64         <source>
+C: CC="/usr/bin/gcc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O2"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /usr/bin/gcc   -O2  -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="/usr/bin/gcc"
+O: COPTIMIZE="-O2"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+
+Build successes: 456.hmmer(base)
+
+Parsing Flags
+  Looking at 456.hmmer base amd64-m64-gcc42-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 456.hmmer train base amd64-m64-gcc42-nn default: existing (run_base_train_amd64-m64-gcc42-nn.0000)
+Running Benchmarks
+  Running (#1) 456.hmmer train base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu2006/bin/specinvoke -d /home/usuario/SPECcpu2006/benchspec/CPU2006/456.hmmer/run/run_base_train_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu2006/bin/specinvoke -E -d /home/usuario/SPECcpu2006/benchspec/CPU2006/456.hmmer/run/run_base_train_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+  Running (#2) 456.hmmer train base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu2006/bin/specinvoke -d /home/usuario/SPECcpu2006/benchspec/CPU2006/456.hmmer/run/run_base_train_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu2006/bin/specinvoke -E -d /home/usuario/SPECcpu2006/benchspec/CPU2006/456.hmmer/run/run_base_train_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+  Running (#3) 456.hmmer train base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu2006/bin/specinvoke -d /home/usuario/SPECcpu2006/benchspec/CPU2006/456.hmmer/run/run_base_train_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu2006/bin/specinvoke -E -d /home/usuario/SPECcpu2006/benchspec/CPU2006/456.hmmer/run/run_base_train_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Success: 3x456.hmmer
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc42-nn
+    size: train
+      set: int
+        format: raw -> /home/usuario/SPECcpu2006/result/CINT2006.007.train.rsf
+        format: flags -> /home/usuario/SPECcpu2006/result/CINT2006.007.train.flags.html
+        format: ASCII -> /home/usuario/SPECcpu2006/result/CINT2006.007.train.txt
+        format: PDF -> /home/usuario/SPECcpu2006/result/CINT2006.007.train.pdf
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+400.perlbench                               NR                                 
+401.bzip2                                   NR                                 
+403.gcc                                     NR                                 
+429.mcf                                     NR                                 
+445.gobmk                                   NR                                 
+456.hmmer          --       41.9         -- S                                  
+458.sjeng                                   NR                                 
+462.libquantum                              NR                                 
+464.h264ref                                 NR                                 
+471.omnetpp                                 NR                                 
+473.astar                                   NR                                 
+483.xalancbmk                               NR                                 
+ Est. SPECint_base2006                   --
+ Est. SPECint2006                                                   Not Run
+
+      set: fp
+
+The log for this run is in /home/usuario/SPECcpu2006/result/CPU2006.007.log
+
+runspec finished at Wed Dec 28 13:15:13 2016; 176 total seconds elapsed
