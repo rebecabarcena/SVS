@@ -1,0 +1,11 @@
+2016-12-29 12:00:33:144 Validator: [ERROR] RUN_SECONDS value is: 180; should be 1800
+2016-12-29 12:00:33:144 Validator: [ERROR] RAMPUP_SECONDS value is: 30; should be 300
+2016-12-29 12:00:33:144 Validator: [ERROR] RAMPDOWN_SECONDS value is: 30; should be 300
+2016-12-29 12:00:33:145 Validator: [ERROR] ITERATIONS value is: 1; should be 3
+2016-12-29 12:00:33:145 Validator: [ERROR] Invalid configuration.
+2016-12-29 12:00:33:372 SslConnection: [ERROR] IOException during SSL handshake: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+2016-12-29 12:00:33:372 RemoteLoadGen: [ERROR] Unable to successfully initialize workload variables. Terminating.
+2016-12-29 12:00:33:372 SpecwebControl: [ERROR] Could not create all client threads.
+2016-12-29 12:00:33:372 SpecwebControl: [ERROR] runWorkload() failed!
+2016-12-29 12:00:33:373 SpecwebControl: [ERROR] runTests() failed!
+2016-12-29 12:00:33:373 SpecwebControl: [ERROR] Benchmark run failed!
