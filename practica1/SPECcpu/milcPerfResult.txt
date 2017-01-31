@@ -1,0 +1,4 @@
+	Branch Instruction Retired	r00c4	11089511490
+	Branch Misses Retired		r00c5	125849648
+	UnHalted Core Cycles		r00c3	141568376365
+	Instruction Retired		r00c0	139261640848
