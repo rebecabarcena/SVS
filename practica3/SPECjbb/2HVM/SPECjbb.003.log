@@ -1,0 +1,48 @@
+feb 01, 2017 8:43:41 PM spec.jbb.JBBmain main -> INFORMACIÓN: Logging started
+feb 01, 2017 8:43:41 PM spec.jbb.Company primeWithDummyData -> INFORMACIÓN: Loading Warehouse 1...
+feb 01, 2017 8:43:41 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN: Start User Threads
+feb 01, 2017 8:43:41 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 1
+feb 01, 2017 8:43:41 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement began Wed Feb 01 20:43:41 CET 2017 for 0,5 minutes
+feb 01, 2017 8:44:11 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement ended Wed Feb 01 20:44:11 CET 2017
+feb 01, 2017 8:44:11 PM spec.jbb.Company primeWithDummyData -> INFORMACIÓN: Loading Warehouse 2...
+feb 01, 2017 8:44:11 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN: Start User Threads
+feb 01, 2017 8:44:11 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 1
+feb 01, 2017 8:44:11 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 2
+feb 01, 2017 8:44:11 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement began Wed Feb 01 20:44:11 CET 2017 for 0,5 minutes
+feb 01, 2017 8:44:41 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement ended Wed Feb 01 20:44:41 CET 2017
+feb 01, 2017 8:44:41 PM spec.jbb.Company primeWithDummyData -> INFORMACIÓN: Loading Warehouse 3...
+feb 01, 2017 8:44:42 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN: Start User Threads
+feb 01, 2017 8:44:42 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 1
+feb 01, 2017 8:44:42 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 2
+feb 01, 2017 8:44:42 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 3
+feb 01, 2017 8:44:42 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement began Wed Feb 01 20:44:42 CET 2017 for 0,5 minutes
+feb 01, 2017 8:45:12 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement ended Wed Feb 01 20:45:12 CET 2017
+feb 01, 2017 8:45:12 PM spec.jbb.Company primeWithDummyData -> INFORMACIÓN: Loading Warehouse 4...
+feb 01, 2017 8:45:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN: Start User Threads
+feb 01, 2017 8:45:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 1
+feb 01, 2017 8:45:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 2
+feb 01, 2017 8:45:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 3
+feb 01, 2017 8:45:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 4
+feb 01, 2017 8:45:12 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement began Wed Feb 01 20:45:12 CET 2017 for 4 minutes
+feb 01, 2017 8:49:12 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement ended Wed Feb 01 20:49:12 CET 2017
+feb 01, 2017 8:49:12 PM spec.jbb.Company primeWithDummyData -> INFORMACIÓN: Loading Warehouse 5...
+feb 01, 2017 8:49:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN: Start User Threads
+feb 01, 2017 8:49:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 1
+feb 01, 2017 8:49:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 2
+feb 01, 2017 8:49:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 3
+feb 01, 2017 8:49:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 4
+feb 01, 2017 8:49:12 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 5
+feb 01, 2017 8:49:12 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement began Wed Feb 01 20:49:12 CET 2017 for 4 minutes
+feb 01, 2017 8:53:12 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement ended Wed Feb 01 20:53:12 CET 2017
+feb 01, 2017 8:53:12 PM spec.jbb.Company primeWithDummyData -> INFORMACIÓN: Loading Warehouse 6...
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN: Start User Threads
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 1
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 2
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 3
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 4
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 5
+feb 01, 2017 8:53:13 PM spec.jbb.JBBmain DoARun -> INFORMACIÓN:   started user thread for Warehouse 6
+feb 01, 2017 8:53:13 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement began Wed Feb 01 20:53:13 CET 2017 for 4 minutes
+feb 01, 2017 8:57:13 PM spec.jbb.Company displayResultTotals -> INFORMACIÓN: Timing Measurement ended Wed Feb 01 20:57:13 CET 2017
+feb 01, 2017 8:57:13 PM spec.jbb.JBBmain callReporter -> INFORMACIÓN: Calling Reporter
+feb 01, 2017 8:57:14 PM spec.jbb.JBBmain main -> INFORMACIÓN: Logging ended
