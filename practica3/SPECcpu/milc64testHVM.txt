@@ -1,0 +1,173 @@
+runspec v4662 - Copyright 1999-2006 Standard Performance Evaluation Corporation
+Using 'linux-suse101-AMD64' tools
+Reading MANIFEST... 17856 files
+Loading runspec modules...............
+Locating benchmarks...found 31 benchmarks in 12 benchsets.
+Locating output formats: ASCII, config, CSV, flags, HTML, mail, PDF, PostScript, raw, Screen, Submission Check
+Reading config file '/home/usuario/SPECcpu2006/config/myconfig-64.cfg'
+Benchmarks selected: 433.milc
+Compiling Binaries
+  Building 433.milc test base amd64-m64-gcc42-nn default: (build_base_amd64-m64-gcc42-nn.0000)
+specmake clean 2> make.clean.err | tee make.clean.out
+rm -rf milc milc.exe *.o  *.fppized.f*
+find . \( -name \*.o -o -name '*.fppized.f*' \) -print | xargs rm -rf
+rm -rf core 
+specmake build 2> make.err | tee make.out
+/usr/bin/gcc -c -o control.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         control.c
+/usr/bin/gcc -c -o f_meas.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         f_meas.c
+/usr/bin/gcc -c -o gauge_info.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         gauge_info.c
+/usr/bin/gcc -c -o setup.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         setup.c
+/usr/bin/gcc -c -o update.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         update.c
+/usr/bin/gcc -c -o update_h.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         update_h.c
+/usr/bin/gcc -c -o update_u.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         update_u.c
+/usr/bin/gcc -c -o layout_hyper.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         layout_hyper.c
+/usr/bin/gcc -c -o check_unitarity.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         check_unitarity.c
+/usr/bin/gcc -c -o d_plaq4.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         d_plaq4.c
+/usr/bin/gcc -c -o gaugefix2.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         gaugefix2.c
+/usr/bin/gcc -c -o io_helpers.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         io_helpers.c
+/usr/bin/gcc -c -o io_lat4.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         io_lat4.c
+io_lat4.c: In function 'qcdhdr_get_hdr':
+io_lat4.c:195:11: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+io_lat4.c:195:21: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+io_lat4.c: In function 'read_gauge_hdr':
+io_lat4.c:1334:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+/usr/bin/gcc -c -o make_lattice.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         make_lattice.c
+/usr/bin/gcc -c -o path_product.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         path_product.c
+/usr/bin/gcc -c -o ploop3.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         ploop3.c
+/usr/bin/gcc -c -o ranmom.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         ranmom.c
+/usr/bin/gcc -c -o ranstuff.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         ranstuff.c
+/usr/bin/gcc -c -o reunitarize2.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         reunitarize2.c
+/usr/bin/gcc -c -o gauge_stuff.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         gauge_stuff.c
+/usr/bin/gcc -c -o grsource_imp.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         grsource_imp.c
+/usr/bin/gcc -c -o mat_invert.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         mat_invert.c
+/usr/bin/gcc -c -o quark_stuff.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         quark_stuff.c
+/usr/bin/gcc -c -o rephase.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         rephase.c
+/usr/bin/gcc -c -o cmplx.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         cmplx.c
+/usr/bin/gcc -c -o addmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         addmat.c
+/usr/bin/gcc -c -o addvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         addvec.c
+/usr/bin/gcc -c -o clear_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         clear_mat.c
+/usr/bin/gcc -c -o clearvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         clearvec.c
+/usr/bin/gcc -c -o m_amatvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_amatvec.c
+/usr/bin/gcc -c -o m_mat_an.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_mat_an.c
+/usr/bin/gcc -c -o m_mat_na.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_mat_na.c
+/usr/bin/gcc -c -o m_mat_nn.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_mat_nn.c
+/usr/bin/gcc -c -o m_matvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_matvec.c
+/usr/bin/gcc -c -o make_ahmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         make_ahmat.c
+/usr/bin/gcc -c -o rand_ahmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         rand_ahmat.c
+/usr/bin/gcc -c -o realtr.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         realtr.c
+/usr/bin/gcc -c -o s_m_a_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         s_m_a_mat.c
+/usr/bin/gcc -c -o s_m_a_vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         s_m_a_vec.c
+/usr/bin/gcc -c -o s_m_s_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         s_m_s_mat.c
+/usr/bin/gcc -c -o s_m_vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         s_m_vec.c
+/usr/bin/gcc -c -o s_m_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         s_m_mat.c
+/usr/bin/gcc -c -o su3_adjoint.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         su3_adjoint.c
+/usr/bin/gcc -c -o su3_dot.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         su3_dot.c
+/usr/bin/gcc -c -o su3_rdot.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         su3_rdot.c
+/usr/bin/gcc -c -o su3_proj.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         su3_proj.c
+/usr/bin/gcc -c -o su3mat_copy.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         su3mat_copy.c
+/usr/bin/gcc -c -o submat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         submat.c
+/usr/bin/gcc -c -o subvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         subvec.c
+/usr/bin/gcc -c -o trace_su3.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         trace_su3.c
+/usr/bin/gcc -c -o uncmp_ahmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         uncmp_ahmat.c
+/usr/bin/gcc -c -o msq_su3vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         msq_su3vec.c
+/usr/bin/gcc -c -o sub4vecs.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         sub4vecs.c
+/usr/bin/gcc -c -o m_amv_4dir.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_amv_4dir.c
+/usr/bin/gcc -c -o m_amv_4vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_amv_4vec.c
+/usr/bin/gcc -c -o m_mv_s_4dir.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_mv_s_4dir.c
+/usr/bin/gcc -c -o m_su2_mat_vec_n.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_su2_mat_vec_n.c
+/usr/bin/gcc -c -o l_su2_hit_n.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         l_su2_hit_n.c
+/usr/bin/gcc -c -o r_su2_hit_a.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         r_su2_hit_a.c
+/usr/bin/gcc -c -o m_su2_mat_vec_a.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_su2_mat_vec_a.c
+/usr/bin/gcc -c -o gaussrand.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         gaussrand.c
+/usr/bin/gcc -c -o byterevn.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         byterevn.c
+/usr/bin/gcc -c -o m_mat_hwvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_mat_hwvec.c
+/usr/bin/gcc -c -o m_amat_hwvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         m_amat_hwvec.c
+/usr/bin/gcc -c -o dslash_fn2.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         dslash_fn2.c
+/usr/bin/gcc -c -o d_congrad5_fn.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         d_congrad5_fn.c
+/usr/bin/gcc -c -o com_vanilla.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         com_vanilla.c
+com_vanilla.c: In function 'field_pointer_at_direction':
+com_vanilla.c:843:13: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+/usr/bin/gcc -c -o io_nonansi.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         io_nonansi.c
+/usr/bin/gcc   -O2   -DSPEC_CPU_LP64        control.o f_meas.o gauge_info.o setup.o update.o update_h.o update_u.o layout_hyper.o check_unitarity.o d_plaq4.o gaugefix2.o io_helpers.o io_lat4.o make_lattice.o path_product.o ploop3.o ranmom.o ranstuff.o reunitarize2.o gauge_stuff.o grsource_imp.o mat_invert.o quark_stuff.o rephase.o cmplx.o addmat.o addvec.o clear_mat.o clearvec.o m_amatvec.o m_mat_an.o m_mat_na.o m_mat_nn.o m_matvec.o make_ahmat.o rand_ahmat.o realtr.o s_m_a_mat.o s_m_a_vec.o s_m_s_mat.o s_m_vec.o s_m_mat.o su3_adjoint.o su3_dot.o su3_rdot.o su3_proj.o su3mat_copy.o submat.o subvec.o trace_su3.o uncmp_ahmat.o msq_su3vec.o sub4vecs.o m_amv_4dir.o m_amv_4vec.o m_mv_s_4dir.o m_su2_mat_vec_n.o l_su2_hit_n.o r_su2_hit_a.o m_su2_mat_vec_a.o gaussrand.o byterevn.o m_mat_hwvec.o m_amat_hwvec.o dslash_fn2.o d_congrad5_fn.o com_vanilla.o io_nonansi.o             -lm        -o milc
+specmake options 2> options.err | tee options.out
+COMP: /usr/bin/gcc -c -o options.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O2        -DSPEC_CPU_LP64         <source>
+C: CC="/usr/bin/gcc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O2 "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: /usr/bin/gcc   -O2   -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="/usr/bin/gcc"
+O: COPTIMIZE="-O2 "
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+
+Build successes: 433.milc(base)
+
+Parsing Flags
+  Looking at 433.milc base amd64-m64-gcc42-nn default: done
+Flag Parsing Complete
+
+Setting Up Run Directories
+  Setting up 433.milc test base amd64-m64-gcc42-nn default: existing (run_base_test_amd64-m64-gcc42-nn.0000)
+Running Benchmarks
+  Running (#1) 433.milc test base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu2006/bin/specinvoke -d /home/usuario/SPECcpu2006/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu2006/bin/specinvoke -E -d /home/usuario/SPECcpu2006/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+  Running (#2) 433.milc test base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu2006/bin/specinvoke -d /home/usuario/SPECcpu2006/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu2006/bin/specinvoke -E -d /home/usuario/SPECcpu2006/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+  Running (#3) 433.milc test base amd64-m64-gcc42-nn default
+/home/usuario/SPECcpu2006/bin/specinvoke -d /home/usuario/SPECcpu2006/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc42-nn.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C
+/home/usuario/SPECcpu2006/bin/specinvoke -E -d /home/usuario/SPECcpu2006/benchspec/CPU2006/433.milc/run/run_base_test_amd64-m64-gcc42-nn.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd
+Success: 3x433.milc
+Producing Reports
+mach: default
+  ext: amd64-m64-gcc42-nn
+    size: test
+      set: int
+      set: fp
+        format: raw -> /home/usuario/SPECcpu2006/result/CFP2006.011.test.rsf
+        format: flags -> /home/usuario/SPECcpu2006/result/CFP2006.011.test.flags.html
+        format: ASCII -> /home/usuario/SPECcpu2006/result/CFP2006.011.test.txt
+        format: PDF -> /home/usuario/SPECcpu2006/result/CFP2006.011.test.pdf
+        format: Screen -> 
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc           --       5.43         -- S                                  
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd                                    NR                                 
+447.dealII                                  NR                                 
+450.soplex                                  NR                                 
+453.povray                                  NR                                 
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm                                     NR                                 
+481.wrf                                     NR                                 
+482.sphinx3                                 NR                                 
+ Est. SPECfp_base2006                    --
+ Est. SPECfp2006                                                    Not Run
+
+
+The log for this run is in /home/usuario/SPECcpu2006/result/CPU2006.011.log
+
+runspec finished at Wed Feb  1 19:27:42 2017; 58 total seconds elapsed
